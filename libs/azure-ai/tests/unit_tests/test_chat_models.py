@@ -551,7 +551,7 @@ def test_identifying_params_keep_zero_values() -> None:
         llm = AzureAIChatCompletionsModel(
             endpoint="https://my-endpoint.inference.ai.azure.com",
             credential="my-api-key",
-            model_name="my-model",
+            model="my-model",
             temperature=0,
             top_p=0,
             presence_penalty=0,
@@ -575,7 +575,7 @@ def test_identifying_params_omit_unset_values() -> None:
         llm = AzureAIChatCompletionsModel(
             endpoint="https://my-endpoint.inference.ai.azure.com",
             credential="my-api-key",
-            model_name="my-model",
+            model="my-model",
         )
 
     assert llm._identifying_params == {}
